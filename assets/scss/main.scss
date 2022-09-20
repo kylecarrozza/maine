@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Regular.woff2') format('woff2'),
+        url('../fonts/Aileron-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Black.woff2') format('woff2'),
+        url('../fonts/Aileron-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('../fonts/Aileron-Bold.woff2') format('woff2'),
+        url('../fonts/Aileron-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+input{
+    &[type="radio"]:checked{
+        & + label{
+            .bg{
+                @apply border border-4 border-purple-1 drop-shadow-3 scale-110;
+                filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.6));
+            }
+            img{
+                @apply scale-75 lg:scale-100;
+            }
+        }
+    }
+}
+
+.drop-shadow-1{
+    filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.15));
+}
+
+.drop-shadow-2{
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+.drop-shadow-3{
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.4));
+}
+
+.drop-shadow-4{
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.4));
+}
+
+form{
+    textarea, input{
+        @apply outline-0 focus:outline-0;
+    }
+    label{
+        &.error{
+            @apply text-white mt-1.5;
+        }
+    }
+}
